@@ -65,14 +65,14 @@ const SideBar = () => {
   ];
 
   return (
-    <div className={appReducer.isSideBarOpen ? "flex flex-col w-[12.5%] p-2" : "flex flex-col p-2"}>
+    <div className={appReducer.isSideBarOpen ? "flex flex-col min-w-[10%] p-2" : "flex flex-col min-w-[4%] p-2"}>
       <div className="border-b border-gray-300">
         <span></span>
         <ul className="py-2">
           {mainOptions.map((option) => (
             <li className="p-2 m-1 hover:bg-zinc-300 hover:rounded-lg flex justify-between items-center">
               <img className="w-6 grow-0 mr-2" src={option.icon} />
-              {appReducer.isSideBarOpen && <span className="grow ml-4">{option.text}</span>}
+              {appReducer.isSideBarOpen && <span className="grow ml-4 text-nowrap">{option.text}</span>}
             </li>
           ))}
         </ul>
@@ -87,7 +87,7 @@ const SideBar = () => {
           {yourOption.map((option) => (
             <li className="p-2 m-1 hover:bg-zinc-300 hover:rounded-lg flex justify-between items-center">
               <img className="w-6 grow-0 mr-2" src={option.icon} />
-              {appReducer.isSideBarOpen && <span className="grow ml-4">{option.text}</span>}
+              {appReducer.isSideBarOpen && <span className="grow ml-4 text-nowrap">{option.text}</span>}
             </li>
           ))}
         </ul>
@@ -101,7 +101,7 @@ const SideBar = () => {
           {subOption.map((option) => (
             <li className="p-2 m-1 hover:bg-zinc-300 hover:rounded-lg flex justify-between items-center">
               <img className="w-6 grow-0 mr-2" src={option.icon} />
-              {appReducer.isSideBarOpen && <span className="grow ml-4">{option.text}</span>}
+              {appReducer.isSideBarOpen && <span className="grow ml-4 text-nowrap">{option.text}</span>}
             </li>
           ))}
         </ul>

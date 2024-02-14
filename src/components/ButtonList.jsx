@@ -1,7 +1,7 @@
 import React from 'react'
 
 function ButtonList() {
-    const buttonNames = ['All', 'Mixes', 'Music', 'Live', 'Stocks', 'News', 'History', 'Motorcycles', 'Javscript', 'Computer programming', 'Indian pop music', 'Game shows', 'Javscript', 'Computer programming', 'Indian pop music']
+    const buttonNames = ['All', 'Mixes', 'Music', 'Live', 'Stocks', 'News', 'History', 'Motorcycles', 'Javscript', 'Computer programming', 'Indian pop music', 'Game shows', 'Javscript']
   return (
     <div className='flex max-w-[90vw] overflow-x-auto scroll-pr-2'>
         {buttonNames.map((name, index) => {
