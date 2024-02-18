@@ -1,0 +1,20 @@
+import { createSlice } from "@reduxjs/toolkit";
+
+const searchSlice = createSlice({
+    name: "search",
+    initialState: {
+
+    },
+    reducers:{
+        cacheResults: (state, action) => {
+            return {...action.payload, ...state};
+        },
+        removeEntry: (state, action) => {
+            delete state[action.payload];
+        }
+    }
+})
+
+export const {cacheResults, removeEntry} = searchSlice.actions;
+
+export default searchSlice.reducer;
